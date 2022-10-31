@@ -28,4 +28,10 @@ router.get("/celebrities", async (req, res) => {
     }
 })
 
+router.get("/celebId", async (req, res) => {
+    const celebId = await Celeb.findById()
+    console.log(celebId)
+    res.render("movies/new-movie", {celebId})
+})
+
 module.exports = router
