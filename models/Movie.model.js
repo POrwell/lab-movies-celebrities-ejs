@@ -14,10 +14,7 @@ plot: {
     type: String,
     required: true 
 },
-cast: {
-    type: Array,
-    required: true
-}
+cast: [{ type: Schema.Types.ObjectId, ref: "Celeb" }],
 })
 
 const Movie = mongoose.model("Movie", movieSchema);
